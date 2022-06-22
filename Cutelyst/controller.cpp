@@ -288,7 +288,7 @@ void ControllerPrivate::registerActionMethods(const QMetaObject *meta, Controlle
                                           controller,
                                           app);
 
-            actions.insert(action->reverse(), { action->reverse(), action });
+            actions.insert(action->reverse(), Replacement{ action->reverse(), action });
             actionList.append(action);
         }
     }
